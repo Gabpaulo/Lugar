@@ -1,0 +1,7 @@
+{
+  "name": "Lvgar",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Route to Destination</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Enter Destination</ion-label>
+    <ion-input [(ngModel)]="destination" ></ion-input>
+  </ion-item>
+  <ion-button expand="full" (click)="calculateRoute()">Show Route</ion-button>
+  <div id="map" style="height: 100%; width: 100%;"></div>
+</ion-content>
+<app-footer></app-footer>

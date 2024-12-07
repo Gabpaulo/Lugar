@@ -11,6 +11,27 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
+    path: 'displaymap',
+    loadChildren: () => import('./displaymap/displaymap.module').then( m => m.DisplaymapPageModule)
+  },
+  {
+    path: 'locate',
+    loadChildren: () => import('./locate/locate.module').then( m => m.LocatePageModule)
+  },
+  {
+    path: 'history',
+    loadChildren: () => import('./history/history.module').then( m => m.HistoryPageModule)
+  },
+ 
+  {
+    path: 'jeepney-routes',
+    loadChildren: () => import('./jeepney-routes/jeepney-routes.module').then( m => m.JeepneyRoutesPageModule)
+  },
 ];
 
 @NgModule({

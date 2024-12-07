@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ item?.title }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <p>{{ item?.description }}</p>
+  <h2>{{ item.title }}</h2>
+        <p>Fare : {{ item.fare }}</p>
+        <p>Travel Time : {{ item.travelTime }}</p>
+        <p>Route : {{ item.jeepneyInfo.route }}</p>
+        <p>Plate No: {{ item.jeepneyInfo.plateNumber }}</p>
+  <h2>{{ item.driver.name }}</h2>
+  <p>{{ item.driver.contact }}</p>
+</ion-content>

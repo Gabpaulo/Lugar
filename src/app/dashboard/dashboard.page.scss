@@ -1,0 +1,130 @@
+* {font-family: 'Poppins';font-size: 22px;};
+
+.home-page {
+    --background: #ffffff;
+    .header {
+      background: linear-gradient(to right, #ff8147, #ff6300);
+      color: white;
+      height: 10rem;
+      padding: 1.5rem;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      
+      .user-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+  
+        .avatar {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          border: 2px solid white;
+        }
+  
+        .user-text {
+          flex-grow: 1;
+          margin-left: 1rem;
+  
+          h2 {
+            font-size: 1.2rem;
+            margin: 0;
+          }
+          p {
+            margin: 0;
+            font-size: 0.9rem;
+          }
+  
+          .user-type {
+            font-size: 0.8rem;
+            opacity: 0.8;
+          }
+        }
+  
+        .profile-icon {
+          font-size: 1.5rem;
+        }
+      }
+  
+      .balance-info {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+  
+        .balance {
+          display: flex;
+          align-items: center;
+  
+          ion-icon {
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+          }
+  
+          p {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+          }
+        }
+  
+        .refresh-icon {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  
+    .buttons{
+      margin-top: 1rem;
+  
+      ion-row {
+        justify-content: center;
+  
+        .button {
+          text-align: center;
+          background: white;
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          padding: 1rem;
+          transition: transform 0.2s;
+  
+          &:hover {
+            transform: translateY(-5px);
+          }
+  
+          ion-icon {
+            font-size: 2rem;
+            color: #ff6300;
+          }
+  
+          p {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  
+    .popular-destinations {
+      margin: 2rem 1rem;
+  
+      h3 {
+        font-size: 1.2rem;
+        color: #ff6300;
+        margin-bottom: 1rem;
+      }
+  
+      .box {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  
+    
+  }
+  

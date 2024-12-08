@@ -32,6 +32,10 @@ const routes: Routes = [
     path: 'jeepney-routes',
     loadChildren: () => import('./jeepney-routes/jeepney-routes.module').then( m => m.JeepneyRoutesPageModule)
   },
+  {
+    path: 'lodging',
+    loadChildren: () => import('./lodging/lodging.module').then( m => m.LodgingPageModule)
+  },
 ];
 
 @NgModule({

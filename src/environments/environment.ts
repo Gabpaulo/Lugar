@@ -5,6 +5,15 @@
 export const environment = {
   production: false,
   googleMapsApiKey: 'AIzaSyCLOnL4PZHzrelVoGhOt7eoGN5BWiBSuUU',
+  firebaseConfig : {
+    apiKey: "AIzaSyDhjagBW6Y1ukMhbsU3O_MbJ6Fpb9XLS2I",
+    authDomain: "lugar-e295d.firebaseapp.com",
+    projectId: "lugar-e295d",
+    storageBucket: "lugar-e295d.firebasestorage.app",
+    messagingSenderId: "86551070014",
+    appId: "1:86551070014:web:296a579642155f312cd86f",
+    measurementId: "G-6YGTKT1RGY"
+  }
 };
 
 /*

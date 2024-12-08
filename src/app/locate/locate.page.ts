@@ -9,7 +9,7 @@ export class LocatePage implements AfterViewInit {
   map!: google.maps.Map;
   directionsService = new google.maps.DirectionsService();
   directionsRenderer = new google.maps.DirectionsRenderer();
-  destination: string = ''; // Two-way bound to the input field
+  destination: string = ''; // Destination entered by the user
 
   constructor() {}
 
@@ -17,6 +17,7 @@ export class LocatePage implements AfterViewInit {
     this.loadMap();
   }
 
+  // Initialize the map
   loadMap() {
     const mapElement = document.getElementById('map');
     if (!mapElement) {
@@ -35,6 +36,7 @@ export class LocatePage implements AfterViewInit {
             zoom: 15,
           };
 
+          // Initialize the map
           this.map = new google.maps.Map(mapElement, mapOptions);
           this.directionsRenderer.setMap(this.map);
         },
@@ -48,6 +50,7 @@ export class LocatePage implements AfterViewInit {
     }
   }
 
+  // Calculate and display the route
   calculateRoute() {
     if (!this.destination) {
       console.error('Destination is required');
@@ -62,20 +65,19 @@ export class LocatePage implements AfterViewInit {
             lng: position.coords.longitude,
           };
 
-          this.directionsService.route(
-            {
-              origin,
-              destination: this.destination,
-              travelMode: google.maps.TravelMode.DRIVING,
-            },
-            (response, status) => {
-              if (status === 'OK') {
-                this.directionsRenderer.setDirections(response);
-              } else {
-                console.error('Directions request failed due to ' + status);
-              }
+          const request: google.maps.DirectionsRequest = {
+            origin,
+            destination: this.destination,
+            travelMode: google.maps.TravelMode.DRIVING,
+          };
+
+          this.directionsService.route(request, (response, status) => {
+            if (status === google.maps.DirectionsStatus.OK) {
+              this.directionsRenderer.setDirections(response);
+            } else {
+              console.error('Directions request failed: ', status);
             }
-          );
+          });
         },
         (error) => {
           console.error('Error getting location:', error);

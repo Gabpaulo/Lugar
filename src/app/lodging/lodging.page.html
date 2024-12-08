@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Nearby Lodging</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="map" style="height: 80%; width: 100%;"></div>
+  <ion-list *ngIf="places.length > 0">
+    <ion-list-header>
+      <ion-label>Nearby Lodging</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let place of places">
+      <ion-label>
+        <h2>{{ place.name }}</h2>
+        <p>{{ place.vicinity }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<app-footer></app-footer>
